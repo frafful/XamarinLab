@@ -4,66 +4,128 @@ using System.Linq;
 using System.Threading.Tasks;
 using SQLite;
 using Xamarin.Forms;
+using System.Threading;
+using Marketplace.Helpers;
 
 namespace Marketplace
 {
 	public class Repository<T> where T : ModelBase, new()
 	{
-		static object locker = new object(); 
-		SQLiteConnection database;
+		static object locker = new object();
+        private static readonly AsyncLock lockerAsync = new AsyncLock();
 
 		public Repository()
 		{
-			database = DependencyService.Get<ISQLite>().GetConnection();
-			//db.CreateTable<TodoItem>();
+			//database.CreateTable<UsuarioModel>();
 		}
 
-		public IEnumerable<T> GetItems()
+        public void DropAllTables()
+        {
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            db.DropTable<UsuarioModel>();
+        }
+
+        public void CreateAllTables()
+        {
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            db.CreateTable<UsuarioModel>();
+        }
+
+        public async Task CreateAllTablesAsync()
+        {
+            var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
+
+            await db.CreateTableAsync<UsuarioModel>().ConfigureAwait(false);
+        }
+
+        public IEnumerable<T> GetItems()
 		{
-			lock (locker)
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            lock (locker)
 			{
-				return (from i in database.Table<T>() select i).ToList();
+				return (from i in db.Table<T>() select i).ToList();
 			}
 		}
 
-		/*public IEnumerable<T> GetItemsNotDone()
-		{
-			lock (locker)
-			{
-				return database.Query<T>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-			}
-		}*/
+        public async Task<IEnumerable<T>> GetItemsAsync()
+        {
+            var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
-		public T GetItem(int id)
+            using (await lockerAsync.LockAsync())
+            {
+                return await db.Table<T>().ToListAsync();
+            }
+        }
+                
+        public T GetItem(int id)
 		{
-			lock (locker)
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            lock (locker)
 			{
-				return database.Table<T>().FirstOrDefault(x => x.Id == id);
+				return db.Table<T>().FirstOrDefault(x => x.Id == id);
 			}
 		}
 
-		public int SaveItem(T item)
+        public async Task<T> GetItemAsync(int id)
+        {
+            var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
+
+            using (await lockerAsync.LockAsync())
+            {
+                return await db.Table<T>().Where(x => x.Id == id).FirstOrDefaultAsync();
+            }
+        }
+
+        public int SaveItem(T item)
 		{
-			lock (locker)
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            lock (locker)
 			{
 				if (item.Id != 0)
 				{
-					database.Update(item);
+					db.Update(item);
 					return item.Id;
 				}
 				else {
-					return database.Insert(item);
+					return db.Insert(item);
 				}
 			}
 		}
 
-		public int DeleteItem(int id)
+        public async Task<int> SaveItemAsync(T item)
+        {
+            var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
+
+            using (await lockerAsync.LockAsync())
+            {
+                return await db.InsertAsync(item);
+            }
+        }
+
+        public int DeleteItem(int id)
 		{
-			lock (locker)
+            var db = DependencyService.Get<ISQLite>().GetConnection();
+
+            lock (locker)
 			{
-				return database.Delete<T>(id);
+				return db.Delete<T>(id);
 			}
 		}
-	}
+
+        public async Task<int> DeleteItemAsync(int id)
+        {
+            var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
+
+            using (await lockerAsync.LockAsync())
+            {
+                return await db.DeleteAsync<T>(id);
+            }
+        }
+    }
 }
 
