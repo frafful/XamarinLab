@@ -13,13 +13,13 @@ C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Xamarin.Forms.Xam
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\SQLite-net.xml
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.csprojResolveAssemblyReference.cache
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.App.xaml.g.cs
-C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.MarketplacePage.xaml.g.cs
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.pdb
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Newtonsoft.Json.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\SQLiteNetExtensions.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\SQLiteNetExtensionsAsync.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Newtonsoft.Json.xml
+C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.Pages.LoginPage.xaml.g.cs
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Marketplace.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb

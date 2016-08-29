@@ -48,3 +48,9 @@ C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.T
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ServiceModel.Primitives.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ServiceModel.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ComponentModel.EventBasedAsync.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Net.Primitives.dll
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ServiceModel.Http.dll

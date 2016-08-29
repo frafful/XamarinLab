@@ -8,29 +8,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Marketplace {
+namespace Marketplace.Views {
     using System;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     
     
-    public partial class MarketplacePage : global::Xamarin.Forms.ContentPage {
+    public partial class LoginPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.StackLayout form;
+        private global::Xamarin.Forms.Entry entLogin;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry loginEntry;
+        private global::Xamarin.Forms.Entry entSenha;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry senhaEntry;
+        private global::Xamarin.Forms.Button btnEntrar;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(MarketplacePage));
-            form = this.FindByName<global::Xamarin.Forms.StackLayout>("form");
-            loginEntry = this.FindByName<global::Xamarin.Forms.Entry>("loginEntry");
-            senhaEntry = this.FindByName<global::Xamarin.Forms.Entry>("senhaEntry");
+            this.LoadFromXaml(typeof(LoginPage));
+            entLogin = this.FindByName<global::Xamarin.Forms.Entry>("entLogin");
+            entSenha = this.FindByName<global::Xamarin.Forms.Entry>("entSenha");
+            btnEntrar = this.FindByName<global::Xamarin.Forms.Button>("btnEntrar");
         }
     }
 }

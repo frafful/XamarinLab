@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicoDeAutenticacao" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://200.143.8.103/ENT_MKTv21.2Servicos/Seguranca/Servicos/ServicoDeAutenticacao.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://200.143.8.103/ENT_MKTv21.2Servicos/Seguranca/Servicos/ServicoDeAutenticacao.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" />
+      <xsd:import schemaLocation="http://200.143.8.103/ENT_MKTv21.2Servicos/Seguranca/Servicos/ServicoDeAutenticacao.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://200.143.8.103/ENT_MKTv21.2Servicos/Seguranca/Servicos/ServicoDeAutenticacao.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Dados" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ServicoDeAutenticacao_Autenticar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autenticar" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_Autenticar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_Autenticar_FalhaAoAutenticarFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q1:FalhaAoAutenticar" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AutenticarComOrigem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarComOrigem" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AutenticarComOrigem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarComOrigemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AutenticarComOrigem_FalhaAoAutenticarFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q2:FalhaAoAutenticar" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_NotificaLimpezaDadosLocais_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificaLimpezaDadosLocais" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_NotificaLimpezaDadosLocais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificaLimpezaDadosLocaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_NotificaLimpezaDadosLocais_FalhaAoNotificarLimpezaDadosLocaisFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q3:FalhaAoNotificarLimpezaDadosLocais" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUrlVersao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUrlVersao" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUrlVersao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUrlVersaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUrlVersao_FalhaAoObterUrlVersaoFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q4:FalhaAoObterUrlVersao" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterVersaoAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterVersaoAndroid" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterVersaoAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterVersaoAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterVersaoAndroid_FalhaAoObterVersaoAndroidFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q5:FalhaAoObterVersaoAndroid" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarParametrizacoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarParametrizacoes" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarParametrizacoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarParametrizacoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarParametrizacoes_FalhaAoListarParametrizacoesFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q6:FalhaAoListarParametrizacoes" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ListarUsuarios_FalhaAoListarUsuarioFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q7:FalhaAoListarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterUsuario_FalhaAoObterUsuarioFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q8:FalhaAoObterUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarUsuario_FalhaAoAlterarUsuarioFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q9:FalhaAoAlterarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarSenha_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarSenha" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarSenha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_AlterarSenha_FalhaAoAlterarSenhaFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q10:FalhaAoAlterarSenha" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_CriarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_CriarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_CriarUsuario_FalhaAoCriarUsuarioFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q11:FalhaAoCriarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_BloquearUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:BloquearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_BloquearUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BloquearUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_BloquearUsuario_FalhaAoBloquearUsuarioFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q12:FalhaAoBloquearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterIdDoUsuarioPorReferenciaDeAutenticacao" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterIdDoUsuarioPorReferenciaDeAutenticacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" name="detail" element="q13:FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacao" />
+  </wsdl:message>
+  <wsdl:portType name="ServicoDeAutenticacao">
+    <wsdl:operation name="Autenticar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/Autenticar" message="tns:ServicoDeAutenticacao_Autenticar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AutenticarResponse" message="tns:ServicoDeAutenticacao_Autenticar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AutenticarFalhaAoAutenticarFault" name="FalhaAoAutenticarFault" message="tns:ServicoDeAutenticacao_Autenticar_FalhaAoAutenticarFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutenticarComOrigem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AutenticarComOrigem" message="tns:ServicoDeAutenticacao_AutenticarComOrigem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AutenticarComOrigemResponse" message="tns:ServicoDeAutenticacao_AutenticarComOrigem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AutenticarComOrigemFalhaAoAutenticarFault" name="FalhaAoAutenticarFault" message="tns:ServicoDeAutenticacao_AutenticarComOrigem_FalhaAoAutenticarFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificaLimpezaDadosLocais">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/NotificaLimpezaDadosLocais" message="tns:ServicoDeAutenticacao_NotificaLimpezaDadosLocais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/NotificaLimpezaDadosLocaisResponse" message="tns:ServicoDeAutenticacao_NotificaLimpezaDadosLocais_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/NotificaLimpezaDadosLocaisFalhaAoNotificarLimpezaDadosLocaisFault" name="FalhaAoNotificarLimpezaDadosLocaisFault" message="tns:ServicoDeAutenticacao_NotificaLimpezaDadosLocais_FalhaAoNotificarLimpezaDadosLocaisFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterUrlVersao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUrlVersao" message="tns:ServicoDeAutenticacao_ObterUrlVersao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUrlVersaoResponse" message="tns:ServicoDeAutenticacao_ObterUrlVersao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUrlVersaoFalhaAoObterUrlVersaoFault" name="FalhaAoObterUrlVersaoFault" message="tns:ServicoDeAutenticacao_ObterUrlVersao_FalhaAoObterUrlVersaoFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterVersaoAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterVersaoAndroid" message="tns:ServicoDeAutenticacao_ObterVersaoAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterVersaoAndroidResponse" message="tns:ServicoDeAutenticacao_ObterVersaoAndroid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterVersaoAndroidFalhaAoObterVersaoAndroidFault" name="FalhaAoObterVersaoAndroidFault" message="tns:ServicoDeAutenticacao_ObterVersaoAndroid_FalhaAoObterVersaoAndroidFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarParametrizacoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarParametrizacoes" message="tns:ServicoDeAutenticacao_ListarParametrizacoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarParametrizacoesResponse" message="tns:ServicoDeAutenticacao_ListarParametrizacoes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarParametrizacoesFalhaAoListarParametrizacoesFault" name="FalhaAoListarParametrizacoesFault" message="tns:ServicoDeAutenticacao_ListarParametrizacoes_FalhaAoListarParametrizacoesFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarUsuarios" message="tns:ServicoDeAutenticacao_ListarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarUsuariosResponse" message="tns:ServicoDeAutenticacao_ListarUsuarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ListarUsuariosFalhaAoListarUsuarioFault" name="FalhaAoListarUsuarioFault" message="tns:ServicoDeAutenticacao_ListarUsuarios_FalhaAoListarUsuarioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUsuario" message="tns:ServicoDeAutenticacao_ObterUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUsuarioResponse" message="tns:ServicoDeAutenticacao_ObterUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterUsuarioFalhaAoObterUsuarioFault" name="FalhaAoObterUsuarioFault" message="tns:ServicoDeAutenticacao_ObterUsuario_FalhaAoObterUsuarioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarUsuario" message="tns:ServicoDeAutenticacao_AlterarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarUsuarioResponse" message="tns:ServicoDeAutenticacao_AlterarUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarUsuarioFalhaAoAlterarUsuarioFault" name="FalhaAoAlterarUsuarioFault" message="tns:ServicoDeAutenticacao_AlterarUsuario_FalhaAoAlterarUsuarioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenha">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarSenha" message="tns:ServicoDeAutenticacao_AlterarSenha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarSenhaResponse" message="tns:ServicoDeAutenticacao_AlterarSenha_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/AlterarSenhaFalhaAoAlterarSenhaFault" name="FalhaAoAlterarSenhaFault" message="tns:ServicoDeAutenticacao_AlterarSenha_FalhaAoAlterarSenhaFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/CriarUsuario" message="tns:ServicoDeAutenticacao_CriarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/CriarUsuarioResponse" message="tns:ServicoDeAutenticacao_CriarUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/CriarUsuarioFalhaAoCriarUsuarioFault" name="FalhaAoCriarUsuarioFault" message="tns:ServicoDeAutenticacao_CriarUsuario_FalhaAoCriarUsuarioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BloquearUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/BloquearUsuario" message="tns:ServicoDeAutenticacao_BloquearUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/BloquearUsuarioResponse" message="tns:ServicoDeAutenticacao_BloquearUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/BloquearUsuarioFalhaAoBloquearUsuarioFault" name="FalhaAoBloquearUsuarioFault" message="tns:ServicoDeAutenticacao_BloquearUsuario_FalhaAoBloquearUsuarioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterIdDoUsuarioPorReferenciaDeAutenticacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterIdDoUsuarioPorReferenciaDeAutenticacao" message="tns:ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterIdDoUsuarioPorReferenciaDeAutenticacaoResponse" message="tns:ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ServicoDeAutenticacao/ObterIdDoUsuarioPorReferenciaDeAutenticacaoFalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault" name="FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault" message="tns:ServicoDeAutenticacao_ObterIdDoUsuarioPorReferenciaDeAutenticacao_FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ServicoDeAutenticacao" type="tns:ServicoDeAutenticacao">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autenticar">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/Autenticar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoAutenticarFault">
+        <soap:fault use="literal" name="FalhaAoAutenticarFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AutenticarComOrigem">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/AutenticarComOrigem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoAutenticarFault">
+        <soap:fault use="literal" name="FalhaAoAutenticarFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotificaLimpezaDadosLocais">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/NotificaLimpezaDadosLocais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoNotificarLimpezaDadosLocaisFault">
+        <soap:fault use="literal" name="FalhaAoNotificarLimpezaDadosLocaisFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterUrlVersao">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ObterUrlVersao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoObterUrlVersaoFault">
+        <soap:fault use="literal" name="FalhaAoObterUrlVersaoFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterVersaoAndroid">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ObterVersaoAndroid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoObterVersaoAndroidFault">
+        <soap:fault use="literal" name="FalhaAoObterVersaoAndroidFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarParametrizacoes">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ListarParametrizacoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoListarParametrizacoesFault">
+        <soap:fault use="literal" name="FalhaAoListarParametrizacoesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoListarUsuarioFault">
+        <soap:fault use="literal" name="FalhaAoListarUsuarioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterUsuario">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ObterUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoObterUsuarioFault">
+        <soap:fault use="literal" name="FalhaAoObterUsuarioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/AlterarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoAlterarUsuarioFault">
+        <soap:fault use="literal" name="FalhaAoAlterarUsuarioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenha">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/AlterarSenha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoAlterarSenhaFault">
+        <soap:fault use="literal" name="FalhaAoAlterarSenhaFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CriarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/CriarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoCriarUsuarioFault">
+        <soap:fault use="literal" name="FalhaAoCriarUsuarioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BloquearUsuario">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/BloquearUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoBloquearUsuarioFault">
+        <soap:fault use="literal" name="FalhaAoBloquearUsuarioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterIdDoUsuarioPorReferenciaDeAutenticacao">
+      <soap:operation soapAction="http://tempuri.org/ServicoDeAutenticacao/ObterIdDoUsuarioPorReferenciaDeAutenticacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault">
+        <soap:fault use="literal" name="FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacaoFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicoDeAutenticacao">
+    <wsdl:port name="BasicHttpBinding_ServicoDeAutenticacao" binding="tns:BasicHttpBinding_ServicoDeAutenticacao">
+      <soap:address location="http://200.143.8.103/ENT_MKTv21.2Servicos/Seguranca/Servicos/ServicoDeAutenticacao.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

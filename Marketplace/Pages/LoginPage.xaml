@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Marketplace.ViewModel;assembly=Marketplace"
+             x:Class="Marketplace.Views.LoginPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
+    </ContentPage.Padding>
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds=".5, .5, 200, 200" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Entry x:Name="entLogin" 
+                   Placeholder="Login" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray"/>
+            <Entry x:Name="entSenha" Placeholder="Senha" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray" IsPassword="True"/>
+            <Button Text="Entrar" x:Name="btnEntrar" Clicked="btnEntrar_Clicked"/>
+            <StackLayout.BindingContext>
+                <local:LoginViewModel />
+            </StackLayout.BindingContext>
+        </StackLayout>
+    </AbsoluteLayout>
+    
+</ContentPage>

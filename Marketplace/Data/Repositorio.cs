@@ -9,38 +9,38 @@ using Marketplace.Helpers;
 
 namespace Marketplace
 {
-	public class Repository<T> where T : ModelBase, new()
+	public class Repositorio<T> where T : ModelBase, new()
 	{
 		static object locker = new object();
         private static readonly AsyncLock lockerAsync = new AsyncLock();
 
-		public Repository()
+		public Repositorio()
 		{
-			//database.CreateTable<UsuarioModel>();
+            CriarTodasTabelas();
 		}
 
-        public void DropAllTables()
+        public void ExcluirTodasTabelas()
         {
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
             db.DropTable<UsuarioModel>();
         }
 
-        public void CreateAllTables()
+        public void CriarTodasTabelas()
         {
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
             db.CreateTable<UsuarioModel>();
         }
 
-        public async Task CreateAllTablesAsync()
+        public async Task CriarTodasTabelasAsync()
         {
             var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
             await db.CreateTableAsync<UsuarioModel>().ConfigureAwait(false);
         }
 
-        public IEnumerable<T> GetItems()
+        public IEnumerable<T> Listar()
 		{
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
@@ -50,7 +50,7 @@ namespace Marketplace
 			}
 		}
 
-        public async Task<IEnumerable<T>> GetItemsAsync()
+        public async Task<IEnumerable<T>> ListarAsync()
         {
             var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
@@ -60,7 +60,7 @@ namespace Marketplace
             }
         }
                 
-        public T GetItem(int id)
+        public T Obter(int id)
 		{
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
@@ -70,7 +70,7 @@ namespace Marketplace
 			}
 		}
 
-        public async Task<T> GetItemAsync(int id)
+        public async Task<T> ObterAsync(int id)
         {
             var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
@@ -80,7 +80,7 @@ namespace Marketplace
             }
         }
 
-        public int SaveItem(T item)
+        public int Salvar(T item)
 		{
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
@@ -97,7 +97,7 @@ namespace Marketplace
 			}
 		}
 
-        public async Task<int> SaveItemAsync(T item)
+        public async Task<int> SalvarAsync(T item)
         {
             var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
@@ -107,7 +107,7 @@ namespace Marketplace
             }
         }
 
-        public int DeleteItem(int id)
+        public int Excluir(int id)
 		{
             var db = DependencyService.Get<ISQLite>().GetConnection();
 
@@ -117,7 +117,7 @@ namespace Marketplace
 			}
 		}
 
-        public async Task<int> DeleteItemAsync(int id)
+        public async Task<int> ExcluirAsync(int id)
         {
             var db = DependencyService.Get<ISQLite>().GetAsyncConnection();
 
