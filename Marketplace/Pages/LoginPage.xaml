@@ -8,14 +8,16 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
     </ContentPage.Padding>
     <AbsoluteLayout>
+        <ActivityIndicator x:Name="carregandoModal" IsRunning="False" />
         <StackLayout AbsoluteLayout.LayoutBounds=".5, .5, 200, 200" AbsoluteLayout.LayoutFlags="PositionProportional">
-            <Entry x:Name="entLogin" 
+            <Entry x:Name="entLogin" Text="{Binding Path=Login}"
                    Placeholder="Login" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray"/>
-            <Entry x:Name="entSenha" Placeholder="Senha" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray" IsPassword="True"/>
+            <Entry x:Name="entSenha" Text="{Binding Path=Senha}"
+                   Placeholder="Senha" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray" IsPassword="True"/>
             <Button Text="Entrar" x:Name="btnEntrar" Clicked="btnEntrar_Clicked"/>
-            <StackLayout.BindingContext>
+            <!--<StackLayout.BindingContext>
                 <local:LoginViewModel />
-            </StackLayout.BindingContext>
+            </StackLayout.BindingContext>-->
         </StackLayout>
     </AbsoluteLayout>
     

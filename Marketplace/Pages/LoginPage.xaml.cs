@@ -1,4 +1,5 @@
-﻿using Marketplace.ViewModel;
+﻿using Marketplace.AppServices;
+using Marketplace.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Marketplace.Views
     public partial class LoginPage : ContentPage
     {
         private LoginViewModel viewModel;
+        AutenticarAppService autenticarService;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -19,11 +22,19 @@ namespace Marketplace.Views
             BindingContext = viewModel;
         }
 
-        private void btnEntrar_Clicked(object sender, EventArgs e)
+        private async void btnEntrar_Clicked(object sender, EventArgs e)
         {
+            autenticarService = new AutenticarAppService();
+
             if (viewModel.PodeEntrar)
             {
+                Task<bool> autenticarTask = autenticarService.AutenticarAsync(viewModel.Login, viewModel.Senha);
+                carregandoModal.IsRunning = true;
 
+                var autenticarResult = await autenticarTask;
+
+                if (!autenticarResult)
+                    await DisplayAlert("MarketPlace Mobile", "Usuário ou senha inválidos", "Ok");
             }
         }
     }

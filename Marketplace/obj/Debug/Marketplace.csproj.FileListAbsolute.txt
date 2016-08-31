@@ -22,5 +22,3 @@ C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Newtonsoft.Json.x
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.Pages.LoginPage.xaml.g.cs
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Marketplace.dll.mdb
-C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb
-C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Marketplace.dll.mdb

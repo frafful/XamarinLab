@@ -62,5 +62,7 @@ C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.N
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\bin\Debug\System.ServiceModel.dll.mdb
+C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\android\assets\System.ServiceModel.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\obj\Debug\Marketplace.Droid.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Droid\bin\Debug\Marketplace.Droid.dll.mdb

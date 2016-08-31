@@ -28,6 +28,11 @@ namespace Marketplace.ViewModel
             }
         }
 
+        public LoginViewModel()
+        {
+            Login = string.Empty;
+            Senha = string.Empty;
+        }
 
     }
 }
