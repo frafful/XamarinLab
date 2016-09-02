@@ -1,9 +1,6 @@
 ﻿using Marketplace.AppServices;
 using Marketplace.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -29,9 +26,13 @@ namespace Marketplace.Views
             if (viewModel.PodeEntrar)
             {
                 Task<bool> autenticarTask = autenticarService.AutenticarAsync(viewModel.Login, viewModel.Senha);
+                carregandoModal.IsVisible = true;
                 carregandoModal.IsRunning = true;
+                
 
                 var autenticarResult = await autenticarTask;
+                carregandoModal.IsVisible = false;
+                carregandoModal.IsRunning = false;
 
                 if (!autenticarResult)
                     await DisplayAlert("MarketPlace Mobile", "Usuário ou senha inválidos", "Ok");

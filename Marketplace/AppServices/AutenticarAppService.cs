@@ -5,11 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Marketplace.ServicoDeAutenticacao;
+using System.ServiceModel;
+using System.Diagnostics;
 
 namespace Marketplace.AppServices
 {
     public class AutenticarAppService
     {
+        ServicoDeAutenticacao.ServicoDeAutenticacao servicoDeAutenticacao;
+
+        public AutenticarAppService()
+        {
+            servicoDeAutenticacao = new ServicoDeAutenticacaoClient();
+        }
         public async Task<bool> AutenticarAsync(string login, string senha)
         {
             var repositorio = new RepositorioDeUsuario();
@@ -28,19 +36,24 @@ namespace Marketplace.AppServices
             }
             else
             {
-                var proxy = new ServicoDeAutenticacao.ServicoDeAutenticacaoClient();
-                proxy.AutenticarComOrigemCompleted += new EventHandler<ServicoDeAutenticacao.AutenticarComOrigemCompletedEventArgs>(AutenticarComOrigemCallBack);
-                proxy.AutenticarComOrigemAsync(login, senha, "App Teste");
+                try
+                {
+                    var token = await Task.Factory.FromAsync(servicoDeAutenticacao.BeginAutenticarComOrigem, servicoDeAutenticacao.EndAutenticarComOrigem
+                        , login, senha, "Xamarin App", TaskCreationOptions.None);
 
-                //if()
-            }   
+                    return true;
+                }
+                catch(FaultException fe)
+                {
+                    Debug.WriteLine(@"			{0}", fe.Message);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@"				ERROR {0}", ex.Message);
+                }
 
-            return true;
-        }
-
-        private void AutenticarComOrigemCallBack(object sender, AutenticarComOrigemCompletedEventArgs e)
-        {
-            var result = e.Result;
+                return false;
+            }
         }
     }
 }

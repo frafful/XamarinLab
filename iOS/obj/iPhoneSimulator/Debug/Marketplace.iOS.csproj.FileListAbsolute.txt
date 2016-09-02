@@ -29,5 +29,6 @@ C:\Users\feliper\Source\Repos\XamarinLab\iOS\obj\iPhoneSimulator\Debug\optimized
 C:\Users\feliper\Source\Repos\XamarinLab\iOS\obj\iPhoneSimulator\Debug\Marketplace.iOS.csprojResolveAssemblyReference.cache
 C:\Users\feliper\Source\Repos\XamarinLab\iOS\obj\iPhoneSimulator\Debug\MarketplaceiOS.exe
 C:\Users\feliper\Source\Repos\XamarinLab\iOS\obj\iPhoneSimulator\Debug\MarketplaceiOS.pdb
+C:\Users\feliper\Source\Repos\XamarinLab\iOS\bin\iPhoneSimulator\Debug\Marketplace.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\iOS\obj\iPhoneSimulator\Debug\MarketplaceiOS.exe.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\iOS\bin\iPhoneSimulator\Debug\MarketplaceiOS.exe.mdb

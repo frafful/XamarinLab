@@ -8,7 +8,8 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
     </ContentPage.Padding>
     <AbsoluteLayout>
-        <ActivityIndicator x:Name="carregandoModal" IsRunning="False" />
+        <ActivityIndicator x:Name="carregandoModal" IsRunning="False" IsVisible="False" BackgroundColor="Gray"
+                           AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
         <StackLayout AbsoluteLayout.LayoutBounds=".5, .5, 200, 200" AbsoluteLayout.LayoutFlags="PositionProportional">
             <Entry x:Name="entLogin" Text="{Binding Path=Login}"
                    Placeholder="Login" HorizontalOptions="FillAndExpand" VerticalOptions="Center" PlaceholderColor="Gray"/>
