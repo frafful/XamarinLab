@@ -17,6 +17,9 @@ namespace Marketplace.Views {
     public partial class LoginPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Grid grdLoading;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator carregandoModal;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -31,6 +34,7 @@ namespace Marketplace.Views {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(LoginPage));
+            grdLoading = this.FindByName<global::Xamarin.Forms.Grid>("grdLoading");
             carregandoModal = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("carregandoModal");
             entLogin = this.FindByName<global::Xamarin.Forms.Entry>("entLogin");
             entSenha = this.FindByName<global::Xamarin.Forms.Entry>("entSenha");

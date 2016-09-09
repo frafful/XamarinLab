@@ -1,4 +1,5 @@
-﻿using Marketplace.Views;
+﻿using Marketplace.Pages;
+using Marketplace.Views;
 using Xamarin.Forms;
 
 namespace Marketplace
@@ -9,7 +10,7 @@ namespace Marketplace
 		{
 			InitializeComponent();
             
-            MainPage = new LoginPage();
+            MainPage = new Page1();
 		}
 
 		protected override void OnStart()

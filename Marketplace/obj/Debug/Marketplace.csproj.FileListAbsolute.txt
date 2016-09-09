@@ -20,7 +20,6 @@ C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.App.x
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.Pages.LoginPage.xaml.g.cs
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.pdb
-C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb
-C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Marketplace.dll.mdb
+C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.Pages.Page1.xaml.g.cs
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\obj\Debug\Marketplace.dll.mdb
 C:\Users\feliper\Source\Repos\XamarinLab\Marketplace\bin\Debug\Marketplace.dll.mdb

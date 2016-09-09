@@ -8,6 +8,14 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
     </ContentPage.Padding>
     <AbsoluteLayout>
+        <Grid x:Name="grdLoading" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Gray" Opacity="0.5" IsVisible="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <ActivityIndicator x:Name="carregandoModal" IsRunning="False" IsVisible="False" BackgroundColor="Gray"
                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
         <StackLayout AbsoluteLayout.LayoutBounds=".5, .5, 200, 200" AbsoluteLayout.LayoutFlags="PositionProportional">
