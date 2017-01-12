@@ -1,0 +1,9 @@
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\XamChat.Tests.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\XamChat.Tests.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\nunit.framework.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\XamChat.Core.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\XamChat.Core.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\bin\Debug\nunit.framework.xml
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\obj\Debug\XamChat.Tests.csprojResolveAssemblyReference.cache
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\obj\Debug\XamChat.Tests.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Tests\obj\Debug\XamChat.Tests.pdb

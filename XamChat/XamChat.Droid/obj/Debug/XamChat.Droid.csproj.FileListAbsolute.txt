@@ -1,0 +1,17 @@
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\XamChat.Droid.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\XamChat.Droid.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\com.raffulcorp.xamchat.apk
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\com.raffulcorp.xamchat-Signed.apk
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\XamChat.Core.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\XamChat.Core.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\XamChat.Droid.csprojResolveAssemblyReference.cache
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\XamChat.Droid.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\XamChat.Droid.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\android\bin\com.raffulcorp.xamchat.apk
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\res\layout\main.xml
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\res\values\strings.xml
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\res\drawable\icon.png
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\R.cs.flag
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\uploadflags.txt
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\obj\Debug\XamChat.Droid.dll.mdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Droid\bin\Debug\XamChat.Droid.dll.mdb

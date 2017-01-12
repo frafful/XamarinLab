@@ -1,0 +1,12 @@
+XamChat.Droid.Application, XamChat.Droid;md579db39d369671f974576363edea5a13a.Application
+XamChat.Droid.Application, XamChat.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md579db39d369671f974576363edea5a13a.Application
+XamChat.Droid.Application;md579db39d369671f974576363edea5a13a.Application
+xamchat.droid.Application;md579db39d369671f974576363edea5a13a.Application
+XamChat.Droid.MainActivity, XamChat.Droid;md579db39d369671f974576363edea5a13a.MainActivity
+XamChat.Droid.MainActivity, XamChat.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md579db39d369671f974576363edea5a13a.MainActivity
+XamChat.Droid.MainActivity;md579db39d369671f974576363edea5a13a.MainActivity
+xamchat.droid.MainActivity;md579db39d369671f974576363edea5a13a.MainActivity
+XamChat.Droid.Activities.BaseActivity`1, XamChat.Droid;md523b60c2e339ca504776924e7259b4661.BaseActivity_1
+XamChat.Droid.Activities.BaseActivity`1, XamChat.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md523b60c2e339ca504776924e7259b4661.BaseActivity_1
+XamChat.Droid.Activities.BaseActivity`1;md523b60c2e339ca504776924e7259b4661.BaseActivity_1
+xamchat.droid.activities.BaseActivity_1;md523b60c2e339ca504776924e7259b4661.BaseActivity_1

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pharmalink.ServicoDistribuido.Seguranca.Falhas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FalhaAoAutenticar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="LoginOuSenhaInvalidos" />
+      <xs:enumeration value="ResetDeDadosPendente" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoAutenticar" nillable="true" type="tns:FalhaAoAutenticar" />
+  <xs:simpleType name="FalhaAoNotificarLimpezaDadosLocais">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroInesperado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoNotificarLimpezaDadosLocais" nillable="true" type="tns:FalhaAoNotificarLimpezaDadosLocais" />
+  <xs:simpleType name="FalhaAoObterUrlVersao">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoObterUrlVersao" nillable="true" type="tns:FalhaAoObterUrlVersao" />
+  <xs:simpleType name="FalhaAoObterVersaoAndroid">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoObterVersaoAndroid" nillable="true" type="tns:FalhaAoObterVersaoAndroid" />
+  <xs:simpleType name="FalhaAoListarParametrizacoes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoListarParametrizacoes" nillable="true" type="tns:FalhaAoListarParametrizacoes" />
+  <xs:simpleType name="FalhaAoListarUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoListarUsuario" nillable="true" type="tns:FalhaAoListarUsuario" />
+  <xs:simpleType name="FalhaAoObterUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoObterUsuario" nillable="true" type="tns:FalhaAoObterUsuario" />
+  <xs:simpleType name="FalhaAoAlterarUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+      <xs:enumeration value="TamanhoNomeInvalido" />
+      <xs:enumeration value="UsuarioExistente" />
+      <xs:enumeration value="NomeObrigatorio" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoAlterarUsuario" nillable="true" type="tns:FalhaAoAlterarUsuario" />
+  <xs:simpleType name="FalhaAoAlterarSenha">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+      <xs:enumeration value="TamanhoNomeInvalido" />
+      <xs:enumeration value="UsuarioExistente" />
+      <xs:enumeration value="NomeObrigatorio" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoAlterarSenha" nillable="true" type="tns:FalhaAoAlterarSenha" />
+  <xs:simpleType name="FalhaAoCriarUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ErroDesconhecido" />
+      <xs:enumeration value="AcessoNegado" />
+      <xs:enumeration value="TamanhoLoginInvalido" />
+      <xs:enumeration value="TamanhoNomeInvalido" />
+      <xs:enumeration value="UsuarioExistente" />
+      <xs:enumeration value="NomeObrigatorio" />
+      <xs:enumeration value="LoginObrigatorio" />
+      <xs:enumeration value="SenhaObrigatoria" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoCriarUsuario" nillable="true" type="tns:FalhaAoCriarUsuario" />
+  <xs:simpleType name="FalhaAoBloquearUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AcessoNegado" />
+      <xs:enumeration value="ErroDesconhecido" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoBloquearUsuario" nillable="true" type="tns:FalhaAoBloquearUsuario" />
+  <xs:simpleType name="FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacao">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HistoricoDeAutenticacaoInexistente" />
+      <xs:enumeration value="ErroDesconhecido" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacao" nillable="true" type="tns:FalhaAoObterIdDoUsuarioPorReferenciaDeAutenticacao" />
+</xs:schema>

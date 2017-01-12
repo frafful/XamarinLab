@@ -1,0 +1,7 @@
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\bin\Debug\XamChat.Core.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\bin\Debug\XamChat.Core.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\obj\Debug\XamChat.Core.csprojResolveAssemblyReference.cache
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\obj\Debug\XamChat.Core.dll
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\obj\Debug\XamChat.Core.pdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\obj\Debug\XamChat.Core.dll.mdb
+C:\Users\feliper\Documents\Desenvolvimento\Projetos\Xamarin\XamChat\XamChat.Core\bin\Debug\XamChat.Core.dll.mdb
